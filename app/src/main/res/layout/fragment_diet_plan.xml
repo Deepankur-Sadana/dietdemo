@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#ffffff">
+    android:background="#ffffff"><!--
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
@@ -13,6 +13,12 @@
         android:padding="10dp"
         android:dividerHeight="1dp"
         android:divider="@android:color/transparent"
-        android:scrollbars="none"/>
+        android:scrollbars="none"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
 
 </LinearLayout>

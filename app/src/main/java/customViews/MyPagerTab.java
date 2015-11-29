@@ -6,7 +6,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
-import android.graphics.Typeface;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
@@ -21,7 +20,7 @@ import android.widget.TextView;
 import com.example.deepankur.dietplandemo.R;
 
 
-public class HealthPagerTab extends HorizontalScrollView {
+public class MyPagerTab extends HorizontalScrollView {
 
     private static final int[] ATTRS = new int[] {
             android.R.attr.textSize,
@@ -60,17 +59,17 @@ public class HealthPagerTab extends HorizontalScrollView {
 
     private int tabBackgroundResId = R.drawable.background_tab;
     private HealthSlidingPanel healthSlidingPanel;
-    public HealthPagerTab(Context context) {
+    public MyPagerTab(Context context) {
         this(context, null);
         this.context = context;
     }
 
-    public HealthPagerTab(Context context, AttributeSet attrs) {
+    public MyPagerTab(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
         this.context = context;
     }
 
-    public HealthPagerTab(Context context, AttributeSet attrs, int defStyle) {
+    public MyPagerTab(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         this.context = context;
 

@@ -15,7 +15,7 @@ public class DietPlanFragment extends BaseFragment {
     private int mealid;
     private Button submitBtn;
     private String mealtime;
-
+    private RecyclerView mContentView;
     public DietPlanFragment(String meal, int mealid,String mealtime) {
         this.meal = meal;
         this.mealid = mealid;
