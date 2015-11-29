@@ -11,7 +11,7 @@ import com.example.deepankur.dietplandemo.R;
 import java.util.ArrayList;
 
 import adapters.HealthPagerAdapter;
-import customViews.MyPagerTab;
+import customViews.HealthPagerTab;
 
 public class DietPlanCreateFragmentTwo extends BaseFragment {
 
@@ -27,7 +27,7 @@ public class DietPlanCreateFragmentTwo extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_diet_plan_two, container, false);
 
         Bundle bundle = this.getArguments();
-        MyPagerTab pagerTab = (MyPagerTab) view.findViewById(R.id.pagerTab);
+        HealthPagerTab pagerTab = (HealthPagerTab) view.findViewById(R.id.pagerTab);
         ViewPager pager = (ViewPager) view.findViewById(R.id.pager);
     //    view.findViewById(R.id.submitBtn).setOnClickListener(submitListener);
         HealthPagerAdapter pagerAdapter = new HealthPagerAdapter(getChildFragmentManager(), getActivity());
@@ -60,7 +60,7 @@ public class DietPlanCreateFragmentTwo extends BaseFragment {
     }
 
     private DietPlanFragment getFragment(String day) {
-        DietPlanFragment dietPlan = new DietPlanFragment(null,0,null);
+        DietPlanFragment dietPlan = new DietPlanFragment("","");
         Bundle bundle = new Bundle();
         bundle.putString("day", day);
         dietPlan.setArguments(bundle);

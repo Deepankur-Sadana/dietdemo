@@ -1,11 +1,13 @@
 package customViews;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
+import android.graphics.Typeface;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
@@ -18,9 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.deepankur.dietplandemo.R;
-
-
-public class MyPagerTab extends HorizontalScrollView {
+public class HealthPagerTab extends HorizontalScrollView {
 
     private static final int[] ATTRS = new int[] {
             android.R.attr.textSize,
@@ -37,8 +37,10 @@ public class MyPagerTab extends HorizontalScrollView {
 
     private Paint rectPaint;
     private Paint dividerPaint;
-    private int indicatorColor = Color.parseColor("#603F51B5");
-    private int underlineColor = Color.parseColor("#603F51B5");
+    Resources res = getResources();
+    int color = res.getColor(R.color.app_dark_green);
+    private int indicatorColor = color;
+    private int underlineColor = color;
     private int dividerColor = Color.parseColor("#FFFFFF");
 
     private boolean shouldExpand = false;
@@ -53,23 +55,24 @@ public class MyPagerTab extends HorizontalScrollView {
 
     private int tabTextSize = 16;
     private int tabTextColor = Color.parseColor("#000000");
-
+    private Typeface tabTypeface = null;
+//    private int tabTypefaceStyle = Typeface.BOLD;
 
     private int lastScrollX = 0;
 
     private int tabBackgroundResId = R.drawable.background_tab;
     private HealthSlidingPanel healthSlidingPanel;
-    public MyPagerTab(Context context) {
+    public HealthPagerTab(Context context) {
         this(context, null);
         this.context = context;
     }
 
-    public MyPagerTab(Context context, AttributeSet attrs) {
+    public HealthPagerTab(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
         this.context = context;
     }
 
-    public MyPagerTab(Context context, AttributeSet attrs, int defStyle) {
+    public HealthPagerTab(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         this.context = context;
 
@@ -238,6 +241,4 @@ public class MyPagerTab extends HorizontalScrollView {
     public void setSlidingPanel(HealthSlidingPanel healthSlidingPanel) {
         this.healthSlidingPanel = healthSlidingPanel;
     }
-
-
 }

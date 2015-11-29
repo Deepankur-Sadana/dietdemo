@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">DietPlanDemo</string>
+
+
+
+    <string-array name="dummy123">
+        <item>111111111111111111</item>
+        <item>222222222222</item>
+        <item>33333333333</item>
+    </string-array>
+
 </resources>

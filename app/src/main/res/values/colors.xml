@@ -11,4 +11,5 @@
     <color name="white">#ffffff</color>
     <color name="light_gray">#e6e7e8</color>
     <color name="app_white">#f7f7f7</color>
+    <color name="app_gray">#80000000</color>
 </resources>
