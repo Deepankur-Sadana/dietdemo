@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_background">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ListView
+            android:id="@+id/dietPlanLV"
+            android:dividerHeight="5dp"
+            android:paddingTop="5dp"
+            android:divider="@android:color/transparent"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <floatingButton.FloatingActionButton
+            android:layout_gravity="bottom|right"
+            android:id="@+id/createBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/app_dark_green"
+            fab:fab_colorPressed="@color/app_orange"
+            fab:fab_icon="@mipmap/ic_add_white"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"/>
+    </FrameLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/app_dark_green">
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/nextBtn"/>
+
+   </LinearLayout>
+
+</LinearLayout>
