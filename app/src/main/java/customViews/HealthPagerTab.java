@@ -54,7 +54,7 @@ public class HealthPagerTab extends HorizontalScrollView {
 
     private int tabTextSize = 16;
     private int tabTextColor = Color.parseColor("#000000");
-    
+
 
     private int lastScrollX = 0;
 
@@ -239,4 +239,6 @@ public class HealthPagerTab extends HorizontalScrollView {
     public void setSlidingPanel(HealthSlidingPanel healthSlidingPanel) {
         this.healthSlidingPanel = healthSlidingPanel;
     }
+
+
 }
