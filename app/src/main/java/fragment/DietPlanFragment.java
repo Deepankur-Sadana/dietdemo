@@ -29,6 +29,7 @@ import adapters.CardViewTitleAdapter;
 import floatingButton.FloatingActionButton;
 import interfaces.RecyleViewItemClickInterface;
 import models.FoodEntity;
+import models.FoodWithImage;
 
 
 public class DietPlanFragment extends BaseFragment implements RecyleViewItemClickInterface, View.OnClickListener {
@@ -39,8 +40,9 @@ public class DietPlanFragment extends BaseFragment implements RecyleViewItemClic
     String mealType;
     String time;
     String unit;
-    ArrayList<String> foodItems = new ArrayList<>();
-    ArrayList<String> foodTimings = new ArrayList<>();
+    ArrayList<FoodWithImage> foodData = new ArrayList<>();
+
+
 
     private ArrayList<FoodEntity> foodListData = null;
     private FloatingActionButton create;
@@ -191,8 +193,10 @@ public class DietPlanFragment extends BaseFragment implements RecyleViewItemClic
                         if (!quantity.isEmpty() && !unit.equals("choose unit")) {
                             //   foodListData.add(new DietPlanFoodEntity(entity.getFood(), entity.getFood_id(), quantity, unit));
                             //  adapter.notifyDataSetChanged();
-                            foodItems.add(finalFoodName.getText().toString());
-                            foodTimings.add(foodTime.getText().toString());
+
+                            FoodWithImage foodWithImage=new FoodWithImage(finalFoodName.getText().toString(),
+                                    foodTime.getText().toString(),quantityET.getText().toString(),unit,null);
+                            foodData.add(foodWithImage);
                             refreshRecyclerView();
                             dialog1.dismiss();
                             dialog.dismiss();
@@ -211,7 +215,7 @@ public class DietPlanFragment extends BaseFragment implements RecyleViewItemClic
     }
 
     private void refreshRecyclerView() {
-        final CardViewTitleAdapter adapter = new CardViewTitleAdapter(getActivity(), this, foodItems, foodTimings);
+        final CardViewTitleAdapter adapter = new CardViewTitleAdapter(getActivity(), this, foodData);
         mContentView.setAdapter(adapter);
     }
 
