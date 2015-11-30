@@ -6,9 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.deepankur.dietplandemo.R;
+
+import java.util.ArrayList;
 
 import interfaces.RecyleViewItemClickInterface;
 
@@ -16,26 +19,38 @@ import interfaces.RecyleViewItemClickInterface;
 public class CardViewTitleAdapter extends RecyclerView.Adapter<CardViewTitleAdapter.ViewHolder> {
 
 	private Context context;
-	private String[] title;
 	private RecyleViewItemClickInterface clickInterface;
+	String items[];
+	String time[];
 
 	public CardViewTitleAdapter(Context context, RecyleViewItemClickInterface clickInterface) {
 		this.context = context;
 		this.clickInterface = clickInterface;
-		title = context.getResources().getStringArray(R.array.dummy123);
 
+
+	}
+
+	public CardViewTitleAdapter(Context context, RecyleViewItemClickInterface clickInterface,
+								ArrayList<String> fooditem,ArrayList<String> foodTime) {
+		this.context = context;
+		this.clickInterface = clickInterface;
+		items = fooditem.toArray( new String[fooditem.size()]);
+
+		time = foodTime.toArray( new String[foodTime.size()]);
 
 	}
 
 	@Override
 	public int getItemCount() {
-		return title.length;
+		return items.length;
 	}
 
 	@Override
 	public void onBindViewHolder(ViewHolder viewHolder, final int i) {
 
-		viewHolder.vTitle.setText(title[i]);
+		viewHolder.vItem.setText(items[i]);
+		viewHolder.vTime.setText(time[i]);
+		viewHolder.vImage.setImageResource(R.mipmap.dosa);
 		viewHolder.itemView.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -58,12 +73,16 @@ public class CardViewTitleAdapter extends RecyclerView.Adapter<CardViewTitleAdap
 
 	public static class ViewHolder extends RecyclerView.ViewHolder {
 
-		protected TextView vTitle;
+		protected TextView vItem;
+		protected TextView vTime;
+		protected ImageView vImage;
 
 		public ViewHolder(View v) {
 			super(v);
 
-			vTitle = (TextView) v.findViewById(R.id.card_title);
+			vItem = (TextView) v.findViewById(R.id.card_title);
+			vTime = (TextView) v.findViewById(R.id.card_time);
+			vImage = (ImageView) v.findViewById(R.id.card_image);
 		}
 
 	}

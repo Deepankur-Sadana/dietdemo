@@ -9,13 +9,53 @@
         android:layout_height="match_parent"
         android:padding="10dp">
     <EditText
-        android:id="@+id/foodSearchET"
+        android:id="@+id/foodNameET"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Type food name"/>
-        <ListView
-            android:id="@+id/foodList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/foodTimeTV"
+            android:layout_width="wrap_content"
+            android:padding="20dp"
+            android:layout_height="75dp"
+            android:hint="00:00"
+            android:gravity="center"/>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_gravity="center_vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cancel"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/app_dark_green"
+                    android:textAllCaps="true"
+                    android:padding="5dp"/>
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DONE"
+                    android:textColor="@color/app_dark_green"
+                    android:textAllCaps="true"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+        </TableRow>
     </LinearLayout>
+
 </LinearLayout>

@@ -21,7 +21,7 @@ public class FoodAdapter extends BaseAdapter {
         this.context = context;
         this.foodList = foodList;
         this.foodListTemp = new ArrayList<>();
-        this.foodListTemp.addAll(foodList);
+//        this.foodListTemp.addAll(foodList);
     }
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
