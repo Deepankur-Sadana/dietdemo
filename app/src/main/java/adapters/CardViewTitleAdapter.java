@@ -23,6 +23,8 @@ public class CardViewTitleAdapter extends RecyclerView.Adapter<CardViewTitleAdap
 		this.context = context;
 		this.clickInterface = clickInterface;
 		title = context.getResources().getStringArray(R.array.dummy123);
+
+
 	}
 
 	@Override

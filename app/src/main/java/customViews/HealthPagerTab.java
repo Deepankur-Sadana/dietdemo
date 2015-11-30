@@ -56,7 +56,6 @@ public class HealthPagerTab extends HorizontalScrollView {
     private int tabTextSize = 16;
     private int tabTextColor = Color.parseColor("#000000");
     private Typeface tabTypeface = null;
-//    private int tabTypefaceStyle = Typeface.BOLD;
 
     private int lastScrollX = 0;
 

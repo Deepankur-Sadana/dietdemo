@@ -2,12 +2,14 @@ package fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.deepankur.dietplandemo.MainActivity;
 import com.example.deepankur.dietplandemo.R;
 
 import adapters.CardViewTitleAdapter;
@@ -51,8 +53,8 @@ public class DietPlanFragment extends BaseFragment implements RecyleViewItemClic
         create.setOnClickListener(this);
 
 
- /*       day = getArguments().getString("day");
-        ListView list = (ListView) view.findViewById(R.id.list);
+        mealType = getArguments().getString("mealtype");
+        /*ListView list = (ListView) view.findViewById(R.id.list);
         DietPlanDetailAdapter detailAdapter = new DietPlanDetailAdapter(getActivity(), dietPlanData, day);
         list.setAdapter(detailAdapter);
         list.setOnItemClickListener(itemClickListener);*/
@@ -85,7 +87,7 @@ public class DietPlanFragment extends BaseFragment implements RecyleViewItemClic
 
     @Override
     public String getTitle() {
-        return "Practice Management";
+        return null;
     }
 
 
@@ -110,7 +112,20 @@ public class DietPlanFragment extends BaseFragment implements RecyleViewItemClic
 
     @Override
     public void onClick(View v) {
-        if(v==create){
+        if (v.getId() == R.id.create_fab) {
+
+            Bundle bundle=new Bundle();
+
+            FoodListFragment foodListFragment = new FoodListFragment();
+
+            bundle.putString("", "");
+            foodListFragment.setArguments(bundle);
+
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.content_frame, foodListFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+
 
         }
     }

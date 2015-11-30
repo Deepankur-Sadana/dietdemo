@@ -59,10 +59,10 @@ public class DietPlanCreateFragmentTwo extends BaseFragment {
         else return "Assign Diet Plan";
     }
 
-    private DietPlanFragment getFragment(String day) {
-        DietPlanFragment dietPlan = new DietPlanFragment("","");
+    private DietPlanFragment getFragment(String mealtype) {
+        DietPlanFragment dietPlan = new DietPlanFragment(mealtype,"");
         Bundle bundle = new Bundle();
-        bundle.putString("day", day);
+        bundle.putString("mealtype", mealtype);
         dietPlan.setArguments(bundle);
         return dietPlan;
     }

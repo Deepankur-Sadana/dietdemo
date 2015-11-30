@@ -9,4 +9,29 @@
         <item>33333333333</item>
     </string-array>
 
+
+
+    <string-array name="foods">
+        <item>Sambar</item>
+        <item>Rice</item>
+        <item>Idly</item>
+        <item>Vada</item>
+        <item>Noodles</item>
+        <item>Rasam</item>
+        <item>Dosa</item>
+        <item>Maggi</item>
+        <item>Top Ramen</item>
+    </string-array>
+    <string-array name="unit_array">
+        <item>choose unit</item>
+        <item>piece</item>
+        <item>glass</item>
+        <item>cup</item>
+        <item>katori</item>
+        <item>ml</item>
+        <item>grams</item>
+        <item>tablespoon</item>
+        <item>teaspoon</item>
+        <item>bowl</item>
+    </string-array>
 </resources>

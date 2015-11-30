@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/DialogLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:minWidth="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="vertical" >
+        <TableRow
+            android:id="@+id/titleRow"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/foodNameET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textSize="16sp"
+                android:textColor="@android:color/black" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/firstLinear"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:inputType="phone"
+
+                        android:id="@+id/quantityET"
+                        android:layout_width="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" />
+                    <Spinner
+                        android:id="@+id/unitSpinner"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:gravity="right" >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+           <!--     <Button
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Cancel"
+                    android:textSize="17dip"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_selector"
+                    android:textStyle="bold" />-->
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cancel"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/app_dark_green"
+                    android:textAllCaps="true"
+                    android:padding="5dp"/>
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/addBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DONE"
+                    android:textColor="@color/app_dark_green"
+                    android:textAllCaps="true"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+        </TableRow>
+    </LinearLayout>
+
+</LinearLayout>
